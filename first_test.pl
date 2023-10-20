@@ -19,3 +19,14 @@ amis(pers0, pers2).
 
 % Si deux personnes ont un ami commun, alors elles sont amies entre elles
 amis(Z, Y) :- amis(X, Z), amis(X, Y).
+
+%Programme qui fait une recherche dans un grapphe pré-défini
+lien(1,2).
+lien(2,3).
+lien(3,4).
+lien(4,5).
+lien(4,2).
+lien(2,5).
+recherche(D,D).
+recherche(D,A) :- lien(D,L), recherche(L,A).
+
