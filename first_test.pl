@@ -7,4 +7,4 @@ homme(socrate).
 % si socrate est un homme(toujours vrai) alors il est mort aujourd'hui
 mort(socrate):-homme(socrate).
 % si socrate est mort , alors il n'est pas vivant
-vivant(socrate) :- \+ mort(socrate).
+vivant(socrate) :- not( mort(socrate)).
