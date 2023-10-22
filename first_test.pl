@@ -61,3 +61,14 @@ soeur-frr(X,Y) :- parent(Z, X),parent(Z, Y) , Y \= X.
 % ?-parent(X, patricia),parent(Y, patricia), X \= Y.
 % ?-parent(robert, X), parent(X, Y), parent(Y, Z), parent(Z, sylvie).
 % ?-soeur-frr(sonia, kevin).
+
+% Des input Output avec prolog 
+small_input_output_program :-
+    write("Choose a color(black or white): "),
+    read_line_to_string(user_input, Input),
+    (Input = "white" ->  
+       write("You chose white");
+    Input = "black"->  
+       write("You chose Black");
+    true
+    ).
