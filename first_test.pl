@@ -55,7 +55,9 @@ parent(julie, jean).
 parent(sylvain, jean).
 parent(luc, sylvie).
 parent(rachel, sylvie).
+soeur-frr(X,Y) :- parent(Z, X),parent(Z, Y) , Y \= X.
 
 % Exemple de requete:
 % ?-parent(X, patricia),parent(Y, patricia), X \= Y.
 % ?-parent(robert, X), parent(X, Y), parent(Y, Z), parent(Z, sylvie).
+% ?-soeur-frr(sonia, kevin).
