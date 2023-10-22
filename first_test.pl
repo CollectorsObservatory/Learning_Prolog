@@ -29,4 +29,33 @@ lien(4,2).
 lien(2,5).
 recherche(D,D).
 recherche(D,A) :- lien(D,L), recherche(L,A).
+% Code lien de parenté
 
+parent(pamela, robert).
+parent(thomas, robert).
+parent(pierre, elizabeth).
+parent(marie, elizabeth).
+parent(robert, anne).
+parent(robert, patricia).
+parent(elizabeth, anne).
+parent(elizabeth, patricia).
+parent(anne, julie).
+parent(anne, nathalie).
+parent(anne, luc).
+parent(jimmy, julie).
+parent(jimmy, nathalie).
+parent(jimmy, luc).
+parent(patricia, marc).
+parent(patricia, kevin).
+parent(martin, marc).
+parent(martin, kevin).
+parent(kevin, tom).
+parent(sonia, tom).
+parent(julie, jean).
+parent(sylvain, jean).
+parent(luc, sylvie).
+parent(rachel, sylvie).
+
+% Exemple de requete:
+% ?-parent(X, patricia),parent(Y, patricia), X \= Y.
+% ?-parent(robert, X), parent(X, Y), parent(Y, Z), parent(Z, sylvie).
